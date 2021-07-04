@@ -31,14 +31,4 @@ public class _剑指06从尾到头打印链表 {
 
         return nodeInt;
     }
-
-    public static class ListNode {
-        private int val;
-        private ListNode next;
-
-        public ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
 }

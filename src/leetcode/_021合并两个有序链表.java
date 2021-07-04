@@ -51,21 +51,4 @@ public class _021合并两个有序链表 {
 
         return dumpNode.next;
     }
-
-    public static class ListNode {
-        private int val;
-        private ListNode next;
-
-        public ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-
-        public ListNode(ListNode next) {
-            this.next = next;
-        }
-
-        public ListNode() {
-        }
-    }
 }
