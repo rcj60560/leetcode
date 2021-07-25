@@ -1,6 +1,5 @@
 package leetcode;
 
-import java.util.Arrays;
 
 public class _剑指58_1翻转单词顺序 {
     public static void main(String[] args) {
@@ -8,7 +7,6 @@ public class _剑指58_1翻转单词顺序 {
         String str = "the sky is blue";
         String s = reverseWords(str);
         System.out.println("s:" + s);
-
     }
 
     public static String reverseWords(String s) {
