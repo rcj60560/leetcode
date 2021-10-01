@@ -17,18 +17,33 @@ public class _001两数之和 {
 
     }
 
-    public static int[] twoSum(int[] nums, int target) {
+    private static int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             map.put(nums[i], i);
         }
+
         for (int i = 0; i < nums.length; i++) {
-            int result = target - nums[i];
-            if (map.containsKey(result) && map.get(result) != i) {
-                return new int[]{i, map.get(result)};
+            int resut = target - nums[i];
+            if (map.containsKey(resut) && map.get(resut) != i) {
+                return new int[]{map.get(resut), i};
             }
         }
-
         return null;
     }
+
+//    public static int[] twoSum(int[] nums, int target) {
+//        HashMap<Integer, Integer> map = new HashMap<>();
+//        for (int i = 0; i < nums.length; i++) {
+//            map.put(nums[i], i);
+//        }
+//        for (int i = 0; i < nums.length; i++) {
+//            int result = target - nums[i];
+//            if (map.containsKey(result) && map.get(result) != i) {
+//                return new int[]{i, map.get(result)};
+//            }
+//        }
+//
+//        return null;
+//    }
 }

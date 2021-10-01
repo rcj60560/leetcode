@@ -1,6 +1,9 @@
-package leetcode;
+package leetcode.链表;
+
+import leetcode.ListNode;
 
 import java.util.Arrays;
+import java.util.logging.Level;
 
 public class _剑指25合并两个排序的链表 {
     public static void main(String[] args) {
@@ -25,24 +28,25 @@ public class _剑指25合并两个排序的链表 {
     }
 
     public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        ListNode dump = new ListNode();
-        ListNode curr = dump;
-
-        while (l1 != null && l2 != null) {
-            if (l1.val < l2.val) {
-                curr.next = l1;
+        ListNode listNode = new ListNode();
+        ListNode temp = listNode;
+        while (l1!=null && l2!=null){
+            if (l1.val < l2.val){
+                temp.next = l1;
                 l1 = l1.next;
-            } else {
-                curr.next = l2;
+            }else {
+                temp.next = l2;
                 l2 = l2.next;
             }
-            curr = curr.next;
+            temp= temp.next;
         }
-        if (l1 == null) {
-            curr.next = l2;
-        } else {
-            curr.next = l1;
+
+        if (l1==null){
+            temp.next = l2;
+        }else {
+            temp.next = l1;
         }
-        return dump.next;
+
+        return listNode.next;
     }
 }
